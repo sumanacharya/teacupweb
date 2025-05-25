@@ -212,4 +212,38 @@ body {
 
 .social-icon:hover {
     color: var(--color-primary-light);
+}
+
+@media (max-width: 767px) {
+    #nav-links {
+        display: none;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: var(--color-background-dark);
+        z-index: 100;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        padding: 0;
+        gap: 0;
+    }
+    #nav-links:not(.hidden) {
+        display: flex !important;
+    }
+    #nav-links a {
+        margin: 0;
+        padding: 1rem 2rem;
+        width: 100%;
+        text-align: left;
+        display: block !important;
+        border-bottom: 1px solid var(--color-border);
+        border-radius: 0;
+        font-size: 1.1rem;
+        background: none;
+    }
+    #nav-links a:last-child {
+        border-bottom: none;
+    }
 } 

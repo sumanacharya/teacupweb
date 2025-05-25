@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Set hero content
-    document.querySelector('.hero-title').textContent = SITE_CONTENT.hero.title;
-    document.querySelector('.hero-subtitle').textContent = SITE_CONTENT.hero.subtitle;
+    setResponsiveHeroContent();
+    window.addEventListener('resize', setResponsiveHeroContent);
     document.querySelector('.hero-cta').textContent = SITE_CONTENT.hero.cta;
 
     // Set services content
@@ -131,4 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Lucide icons
     lucide.createIcons();
-}); 
+});
+
+// Responsive hero content for small screens
+function setResponsiveHeroContent() {
+    const titleEl = document.querySelector('.hero-title');
+    const subtitleEl = document.querySelector('.hero-subtitle');
+    if (window.innerWidth < 200) {
+        titleEl.textContent = 'Build. Launch. Grow.';
+        subtitleEl.textContent = 'Affordable, scalable tech for startups.';
+    } else {
+        titleEl.textContent = SITE_CONTENT.hero.title;
+        subtitleEl.textContent = SITE_CONTENT.hero.subtitle;
+    }
+} 
