@@ -87,10 +87,42 @@ function sanitizeInput(input) {
 }
 
 // Initialize form handling when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', handleFormSubmit);
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && email && message) {
+        formMessage.innerHTML = '<p class="text-blue-400">Sending...</p>';
+        fetch('mail.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+        })
+        .then(response => response.text().then(text => ({ status: response.status, text })))
+        .then(({ status, text }) => {
+          if (status === 200) {
+            formMessage.innerHTML = `<p class="text-green-400">${text}</p>`;
+            contactForm.reset();
+          } else {
+            formMessage.innerHTML = `<p class="text-red-400">${text}</p>`;
+          }
+          setTimeout(() => { formMessage.innerHTML = ''; }, 5000);
+        })
+        .catch(() => {
+          formMessage.innerHTML = '<p class="text-red-400">Failed to send. Please try again later.</p>';
+          setTimeout(() => { formMessage.innerHTML = ''; }, 5000);
+        });
+      } else {
+        formMessage.innerHTML = '<p class="text-red-400">Please fill in all fields</p>';
+        setTimeout(() => { formMessage.innerHTML = ''; }, 3000);
+      }
+    });
+  }
 }); 
-contactForm.addEventListener('submit', handleFormSubmit); 
