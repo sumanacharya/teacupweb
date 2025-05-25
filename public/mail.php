@@ -9,7 +9,8 @@ $message = trim($_POST["message"] ?? '');
 if ($name && $email && $message && filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $subject = "New Contact Form Submission from $name";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $name <$email>\r\nReply-To: $email\r\n";
+    $from = "contact@teacupdigital.com.au";
+    $headers = "From: $from\r\nReply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
         http_response_code(200);

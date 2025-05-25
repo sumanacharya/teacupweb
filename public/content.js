@@ -20,12 +20,6 @@ const SITE_CONTENT = {
         subtitle: 'Enterprise-grade solutions at startup-friendly prices',
         items: [
             {
-                title: 'AI & Machine Learning',
-                description: 'Custom AI solutions that drive growth and efficiency. From predictive analytics to intelligent automation, we build AI systems that deliver real business value.',
-                icon: 'brain-circuit',
-                color: 'from-purple-500 to-pink-500'
-            },
-            {
                 title: 'Enterprise Architecture',
                 description: 'Scalable, secure, and robust systems designed by tech leaders who\'ve built solutions handling millions of users. Future-proof your technology stack.',
                 icon: 'network',
@@ -36,13 +30,19 @@ const SITE_CONTENT = {
                 description: 'Transform your business with cutting-edge technology. Our team of industry veterans helps you leverage the latest innovations to stay ahead of the competition.',
                 icon: 'sparkles',
                 color: 'from-orange-500 to-yellow-500'
-            }
+            },
+            {
+                title: 'AI & Machine Learning',
+                description: 'Custom AI solutions that drive growth and efficiency. From predictive analytics to intelligent automation, we build AI systems that deliver real business value.',
+                icon: 'brain-circuit',
+                color: 'from-purple-500 to-pink-500'
+            },
         ]
     },
     about: {
         title: 'Our Approach',
-        description: 'We combine enterprise expertise with startup agility to deliver exceptional results. Our team of tech leaders has built and scaled systems handling millions of users, and we bring that same level of excellence to every project. What sets us apart is our commitment to understanding your business goals and delivering solutions that drive real growth. We don\'t just build technology – we build partnerships that help your business thrive in the digital age.',
-        cta: 'Schedule Free Strategy Session'
+        description: 'We combine enterprise expertise with startup agility to deliver exceptional results. Our team of tech leaders has built and scaled systems handling millions of users, and we bring that same level of excellence to every project. What sets us apart is our commitment to understanding your business goals and delivering solutions that drive real growth. We don\'t just build technology, we build partnerships that help your business thrive in the digital age.',
+        cta: 'Talk to our team'
     },
     contact: {
         title: 'Start Your Digital Transformation',
@@ -51,15 +51,15 @@ const SITE_CONTENT = {
             name: 'Your Name',
             email: 'Your Email',
             message: 'Tell us about your business goals',
-            submit: 'Book Free Strategy Session',
+            submit: 'Send Message',
             success: 'Thanks {name}! We\'ll be in touch shortly to schedule your free strategy session.',
             error: 'Please fill in all fields'
         }
     },
     footer: {
-        tagline: 'Enterprise tech solutions for startups',
-        copyright: '© 2024 Teacup Digital. All rights reserved.',
-        credits: 'Built by industry veterans'
+        email: 'contact@teacupdigital.com.au',
+        copyright: '© 2025 Teacup Digital',
+        credits: ''
     }
 };
 
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.contact-form-submit').textContent = SITE_CONTENT.contact.form.submit;
 
     // Set footer content
-    document.querySelector('.footer-tagline').textContent = SITE_CONTENT.footer.tagline;
+    document.querySelector('.footer-email').textContent = SITE_CONTENT.footer.email;
     document.querySelector('.footer-copyright').textContent = SITE_CONTENT.footer.copyright;
     document.querySelector('.footer-credits').textContent = SITE_CONTENT.footer.credits;
 
