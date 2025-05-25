@@ -1,0 +1,14 @@
+{
+  "name": "teacup-web-portal",
+  "version": "1.0.0",
+  "description": "Enterprise Tech Solutions for Startups",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "lucide": "^0.294.0",
+    "@emailjs/browser": "^4.1.0"
+  }
+} 
