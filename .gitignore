@@ -26,6 +26,9 @@ yarn-error.log*
 # IDE specific files
 .idea
 .vscode
+
+# Claude Code worktree artifacts
+.claude/
 *.swp
 *.swo
 

@@ -1,0 +1,6 @@
+{
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/mail.php", "destination": "/api/mail" }
+  ]
+}
