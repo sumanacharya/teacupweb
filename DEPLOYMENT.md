@@ -103,7 +103,7 @@ npm run build
 3. Create a new Node.js application:
    - Application root: /home/username/teacup-web-portal
    - Application URL: your-domain.com
-   - Application startup file: server.js
+   - Application startup file: server.cjs
    - Node.js version: 14.x or higher
    - Environment variables:
      ```
@@ -127,7 +127,7 @@ Create a .htaccess file in the root directory with the following content:
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /server.js [L]
+RewriteRule ^(.*)$ /server.cjs [L]
 
 # Enable CORS
 Header set Access-Control-Allow-Origin "*"
