@@ -1,284 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Teacup Digital - Your Partner in Digital Transformation. We build scalable tech solutions that startups can actually afford.">
-    <meta name="keywords" content="digital transformation, tech solutions, startup development, AI integration, web development, mobile apps">
-    <meta name="author" content="Teacup Digital">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Teacup Digital - Your Partner in Digital Transformation">
-    <meta property="og:description" content="We build scalable tech solutions that startups can actually afford.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://teacup.digital">
-    <meta property="og:image" content="https://teacup.digital/assets/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Teacup Digital - Your Partner in Digital Transformation">
-    <meta name="twitter:description" content="We build scalable tech solutions that startups can actually afford.">
-    <meta name="twitter:image" content="https://teacup.digital/assets/og-image.jpg">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://api.emailjs.com https://www.google.com;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <title>Teacup Digital - Your Partner in Digital Transformation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="theme.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Le8QkgrAAAAAAuafPH0lqfJFW6uF6jqgoV3h7ac"></script>
-    <script src="config.js"></script>
-    <script src="content.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="https://teacupdigital.com.au/assets/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teacup Digital — Senior software consulting and engineering based in Sydney. Solution design, cloud architecture, AI, integration and software development.">
+  <meta name="keywords" content="software consulting australia, solution design, cloud architecture, AI automation, system integration, application modernisation, senior engineers">
+  <meta name="author" content="Teacup Digital">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Teacup Digital — Complex Digital Solutions for Australian Organisations">
+  <meta property="og:description" content="Senior software consulting and engineering. Solution design, cloud, AI and application development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://teacupdigital.com.au">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'; media-src 'self' https://teacupdigital.com.au;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <title>Teacup Digital — Complex Digital Solutions, Designed and Built by Senior Engineers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="theme.css?v=2026b" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="content.js?v=2026c" defer></script>
+  <link rel="icon" type="image/x-icon" href="https://teacupdigital.com.au/assets/favicon.ico">
 </head>
-<body class="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-gray-100 antialiased">
+<body>
 
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-3 theme-nav">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-white">
-                <span class="brand-prefix"></span><span class="text-gradient brand-suffix"></span>
-            </a>
-            <button id="menu-toggle" class="block md:hidden text-white focus:outline-none" aria-label="Open menu">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-            <div id="nav-links" class="space-x-6 md:flex hidden flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-dark md:bg-transparent px-6 md:px-0 py-4 md:py-0 shadow-lg md:shadow-none">
-                <a href="#home" class="text-gray-300 hover:text-primary-light transition duration-300 nav-link" data-link="home"></a>
-                <a href="#services" class="text-gray-300 hover:text-primary-light transition duration-300 nav-link" data-link="services"></a>
-                <a href="#about" class="text-gray-300 hover:text-primary-light transition duration-300 nav-link" data-link="about"></a>
-                <!-- <a href="#contact" class="gradient-button text-white font-semibold px-5 py-2 rounded-lg shadow-lg nav-link" data-link="contact"></a> -->
-            </div>
+
+<!-- ══════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="nav-brand">
+      <span class="brand-prefix"></span><span class="brand-suffix"></span>
+    </a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#services" data-nav="services"></a></li>
+      <li><a href="#process"  data-nav="process"></a></li>
+      <li><a href="#about"    data-nav="about"></a></li>
+      <li><a href="#contact" class="nav-cta" data-nav="contact"></a></li>
+    </ul>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+      <i data-lucide="menu" style="width:1.25rem;height:1.25rem"></i>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section id="home">
+  <div class="aurora">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+  </div>
+  <div class="grid-bg"></div>
+
+  <div class="hero-split">
+
+    <div class="hero-text">
+      <div class="hero-label reveal"></div>
+      <h1 class="hero-title reveal reveal-d1"></h1>
+      <p class="hero-sub reveal reveal-d2"></p>
+      <div class="hero-cta-row reveal reveal-d3">
+        <a href="#contact"  class="btn-primary hero-primary-cta"></a>
+        <a href="#services" class="btn-ghost   hero-secondary-cta"></a>
+      </div>
+    </div>
+
+    <!-- Architecture diagram (decorative, hidden on mobile) -->
+    <div class="hero-visual reveal reveal-d2" aria-hidden="true">
+      <svg class="hero-diagram" viewBox="0 0 460 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#6366F1" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="nGlow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <style>
+            @keyframes diagramDash  { from{stroke-dashoffset:0} to{stroke-dashoffset:-42} }
+            @keyframes hubPulse     { 0%,100%{opacity:.75} 50%{opacity:1} }
+            @keyframes nodeFloat    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+            .dg-l1 { stroke-dasharray:5 9; animation:diagramDash 2.8s linear infinite }
+            .dg-l2 { stroke-dasharray:5 9; animation:diagramDash 3.6s linear infinite }
+            .dg-l3 { stroke-dasharray:5 9; animation:diagramDash 2.3s linear infinite }
+            .dg-l4 { stroke-dasharray:5 9; animation:diagramDash 4.0s linear infinite }
+            .dg-l5 { stroke-dasharray:5 9; animation:diagramDash 3.1s linear infinite }
+            .dg-l6 { stroke-dasharray:5 9; animation:diagramDash 2.6s linear infinite }
+            .dg-hub { transform-origin:230px 200px; animation:hubPulse 2.8s ease-in-out infinite }
+            .dg-n1  { transform-origin:230px  60px; animation:nodeFloat 3.4s ease-in-out infinite }
+            .dg-n2  { transform-origin:351px 130px; animation:nodeFloat 4.2s ease-in-out infinite .4s }
+            .dg-n3  { transform-origin:351px 270px; animation:nodeFloat 3.7s ease-in-out infinite .8s }
+            .dg-n4  { transform-origin:230px 340px; animation:nodeFloat 3.9s ease-in-out infinite 1.2s }
+            .dg-n5  { transform-origin:109px 270px; animation:nodeFloat 3.5s ease-in-out infinite 1.6s }
+            .dg-n6  { transform-origin:109px 130px; animation:nodeFloat 4.4s ease-in-out infinite 2.0s }
+          </style>
+        </defs>
+
+        <!-- Ambient glow -->
+        <circle cx="230" cy="200" r="165" fill="url(#hubGlow)"/>
+
+        <!-- Orbit ring -->
+        <circle cx="230" cy="200" r="140" stroke="rgba(148,163,184,0.07)" stroke-width="1" fill="none" stroke-dasharray="2 7"/>
+
+        <!-- Connection lines (drawn before nodes so nodes sit on top) -->
+        <line class="dg-l1" x1="230" y1="200" x2="230"  y2="60"  stroke="#60A5FA" stroke-width="1.5" stroke-opacity="0.5"/>
+        <line class="dg-l2" x1="230" y1="200" x2="351"  y2="130" stroke="#2DD4BF" stroke-width="1.5" stroke-opacity="0.5"/>
+        <line class="dg-l3" x1="230" y1="200" x2="351"  y2="270" stroke="#A78BFA" stroke-width="1.5" stroke-opacity="0.5"/>
+        <line class="dg-l4" x1="230" y1="200" x2="230"  y2="340" stroke="#FCD34D" stroke-width="1.5" stroke-opacity="0.45"/>
+        <line class="dg-l5" x1="230" y1="200" x2="109"  y2="270" stroke="#6EE7B7" stroke-width="1.5" stroke-opacity="0.5"/>
+        <line class="dg-l6" x1="230" y1="200" x2="109"  y2="130" stroke="#67E8F9" stroke-width="1.5" stroke-opacity="0.5"/>
+
+        <!-- Central hub -->
+        <g class="dg-hub" filter="url(#nGlow)">
+          <circle cx="230" cy="200" r="48" fill="rgba(99,102,241,0.18)" stroke="#6366F1" stroke-width="1.5"/>
+          <circle cx="230" cy="200" r="36" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.35)" stroke-width="1"/>
+        </g>
+        <text x="230" y="195" text-anchor="middle" fill="#C7D2FE" font-size="9" font-weight="700" font-family="Inter,sans-serif" letter-spacing="0.1em">YOUR</text>
+        <text x="230" y="210" text-anchor="middle" fill="#C7D2FE" font-size="9" font-weight="700" font-family="Inter,sans-serif" letter-spacing="0.1em">PLATFORM</text>
+
+        <!-- Node 1: Cloud Infrastructure (top) -->
+        <g class="dg-n1">
+          <rect x="187" y="37" width="86" height="46" rx="8" fill="rgba(96,165,250,0.1)" stroke="#60A5FA" stroke-width="1.2" stroke-opacity="0.6"/>
+          <text x="230" y="55" text-anchor="middle" fill="#93C5FD" font-size="9.5" font-weight="600" font-family="Inter,sans-serif">Cloud</text>
+          <text x="230" y="70" text-anchor="middle" fill="#60A5FA"  font-size="8.5" font-family="Inter,sans-serif" fill-opacity="0.85">Infrastructure</text>
+        </g>
+
+        <!-- Node 2: API & Integration (top-right) -->
+        <g class="dg-n2">
+          <rect x="317" y="107" width="74" height="46" rx="8" fill="rgba(45,212,191,0.1)" stroke="#2DD4BF" stroke-width="1.2" stroke-opacity="0.6"/>
+          <text x="354" y="125" text-anchor="middle" fill="#5EEAD4" font-size="9.5" font-weight="600" font-family="Inter,sans-serif">API &amp;</text>
+          <text x="354" y="140" text-anchor="middle" fill="#2DD4BF"  font-size="8.5" font-family="Inter,sans-serif" fill-opacity="0.85">Integration</text>
+        </g>
+
+        <!-- Node 3: AI & Automation (bottom-right) -->
+        <g class="dg-n3">
+          <rect x="317" y="247" width="74" height="46" rx="8" fill="rgba(167,139,250,0.1)" stroke="#A78BFA" stroke-width="1.2" stroke-opacity="0.6"/>
+          <text x="354" y="265" text-anchor="middle" fill="#C4B5FD" font-size="9.5" font-weight="600" font-family="Inter,sans-serif">AI &amp;</text>
+          <text x="354" y="280" text-anchor="middle" fill="#A78BFA"  font-size="8.5" font-family="Inter,sans-serif" fill-opacity="0.85">Automation</text>
+        </g>
+
+        <!-- Node 4: App Modernisation (bottom) -->
+        <g class="dg-n4">
+          <rect x="181" y="317" width="98" height="46" rx="8" fill="rgba(252,211,77,0.08)" stroke="#FCD34D" stroke-width="1.2" stroke-opacity="0.5"/>
+          <text x="230" y="335" text-anchor="middle" fill="#FDE68A" font-size="9.5" font-weight="600" font-family="Inter,sans-serif">Application</text>
+          <text x="230" y="350" text-anchor="middle" fill="#FCD34D"  font-size="8.5" font-family="Inter,sans-serif" fill-opacity="0.8">Modernisation</text>
+        </g>
+
+        <!-- Node 5: Security & Ops (bottom-left) -->
+        <g class="dg-n5">
+          <rect x="68" y="247" width="82" height="46" rx="8" fill="rgba(110,231,183,0.1)" stroke="#6EE7B7" stroke-width="1.2" stroke-opacity="0.6"/>
+          <text x="109" y="265" text-anchor="middle" fill="#A7F3D0" font-size="9.5" font-weight="600" font-family="Inter,sans-serif">Security</text>
+          <text x="109" y="280" text-anchor="middle" fill="#6EE7B7"  font-size="8.5" font-family="Inter,sans-serif" fill-opacity="0.85">&amp; Platform Ops</text>
+        </g>
+
+        <!-- Node 6: Custom Software (top-left) -->
+        <g class="dg-n6">
+          <rect x="62" y="107" width="94" height="46" rx="8" fill="rgba(103,232,249,0.1)" stroke="#67E8F9" stroke-width="1.2" stroke-opacity="0.6"/>
+          <text x="109" y="125" text-anchor="middle" fill="#A5F3FC" font-size="9.5" font-weight="600" font-family="Inter,sans-serif">Custom</text>
+          <text x="109" y="140" text-anchor="middle" fill="#67E8F9"  font-size="8.5" font-family="Inter,sans-serif" fill-opacity="0.85">Software Dev</text>
+        </g>
+
+      </svg>
+    </div>
+
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     TRUST STRIP
+══════════════════════════════════════════════ -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-strip" id="trust-items"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     INDUSTRIES STRIP
+══════════════════════════════════════════════ -->
+<section id="clients">
+  <p class="marquee-label">Industries We Work In</p>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════ -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag services-tag"></div>
+      <h2 class="section-title services-title"></h2>
+      <p  class="section-subtitle services-sub"></p>
+    </div>
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     PROCESS
+══════════════════════════════════════════════ -->
+<section id="process" class="section" style="background:var(--bg-surface);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag process-tag"></div>
+      <h2 class="section-title process-title"></h2>
+      <p  class="section-subtitle process-sub"></p>
+    </div>
+    <div class="process-track" id="process-track"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-layout">
+
+      <div class="about-text reveal">
+        <div class="section-tag about-tag"></div>
+        <blockquote class="about-quote"></blockquote>
+        <h2 class="section-title about-title"></h2>
+        <div class="about-body"></div>
+        <a href="#contact" class="btn-primary about-cta" style="margin-top:2rem;display:inline-flex"></a>
+      </div>
+
+      <div class="about-side reveal reveal-d2">
+        <div class="about-aside-card">
+          <h3 class="about-aside-title">How We Deliver</h3>
+          <ul class="about-bullets" id="about-bullets"></ul>
         </div>
-    </nav>
-
-    <section id="home" class="hero-bg text-white">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://teacupdigital.com.au/assets/table-xs.mp4" type="video/mp4">
-            <!-- Fallback background if video fails to load -->
-            <div class="hero-fallback-bg"></div>
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in-up delay-100 text-gradient hero-title"></h1>
-            <p class="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto fade-in-up delay-200 hero-subtitle"></p>
-            <a href="#contact" class="gradient-button text-white font-bold py-4 px-10 rounded-lg text-lg shadow-xl fade-in-up delay-300 hero-cta"></a>
+        <div class="about-aside-note">
+          <i data-lucide="info" style="width:1rem;height:1rem;color:#818CF8;flex-shrink:0;margin-top:2px"></i>
+          <span>When a project needs additional capacity, we scale through trusted engineering partners while keeping senior technical ownership close to the client.</span>
         </div>
-    </section>
+      </div>
 
-    <div class="section-transition"></div>
+    </div>
+  </div>
+</section>
 
-    <section id="services" class="py-20 bg-background-darker">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gradient mb-4 fade-in-up services-title"></h2>
-                <p class="text-lg text-gray-400 max-w-2xl mx-auto fade-in-up delay-100 services-subtitle"></p>
+
+<!-- ══════════════════════════════════════════════
+     TECHNOLOGIES
+══════════════════════════════════════════════ -->
+<section id="technologies" class="section" style="background:var(--bg-surface);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title tech-title"></h2>
+      <p  class="section-subtitle tech-sub"></p>
+    </div>
+    <div class="tech-pills" id="tech-pills"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+<section id="contact" class="section" style="background:var(--bg-base);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="contact-layout">
+
+      <div class="contact-info reveal">
+        <div class="section-tag contact-tag"></div>
+        <h2 class="contact-title"></h2>
+        <p  class="contact-sub"></p>
+        <div class="contact-details" id="contact-details"></div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="form-card">
+          <form id="contactForm">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-label="name"></label>
+                <input type="text"  id="fname"  name="name"  required
+                       class="form-input" placeholder="Jane Smith">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-label="org"></label>
+                <input type="text"  id="forg"   name="org"
+                       class="form-input" placeholder="Acme Pty Ltd">
+              </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-10" id="services-grid">
-                <!-- Services will be populated by JavaScript -->
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-label="email"></label>
+                <input type="email" id="femail" name="email" required
+                       class="form-input" placeholder="jane@company.com.au">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-label="phone"></label>
+                <input type="tel"   id="fphone" name="phone"
+                       class="form-input" placeholder="+61 4xx xxx xxx">
+              </div>
             </div>
+
+            <div class="form-group">
+              <label class="form-label" data-label="message"></label>
+              <textarea id="fmessage" name="message" required rows="5" class="form-input"
+                        placeholder="Describe the problem you are trying to solve, the systems involved and your timeline if you have one."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit submit-btn"></button>
+
+          </form>
+
+          <div id="formMsg" class="form-msg"></div>
+
+          <div id="thankYou" class="thankyou-wrap hidden">
+            <div class="thankyou-icon">
+              <i data-lucide="check" style="width:1.75rem;height:1.75rem"></i>
+            </div>
+            <h3 class="thankyou-h">Message Received</h3>
+            <p class="thankyou-p" id="thankYouText"></p>
+            <button onclick="resetContactForm()" class="btn-primary">Send Another Message</button>
+          </div>
+
         </div>
-    </section>
+      </div>
 
-    <section id="about" class="py-20 bg-background-dark">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 fade-in-up">
-                <video alt="Our Team" class="rounded-xl shadow-2xl w-full border-gradient" style="filter: hue-rotate(45deg);" autoplay muted loop playsinline>
-                    <source src="https://teacupdigital.com.au/assets/code.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="md:w-1/2 fade-in-up delay-100">
-                <h2 class="text-4xl font-bold text-gradient mb-6 about-title"></h2>
-                <div class="text-lg text-gray-400 mb-10 leading-relaxed about-description"></div>
-                <a href="#contact" class="border-2 border-primary text-primary-light hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 about-cta"></a>
-            </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <a href="#" class="footer-brand-link">
+          <span class="brand-prefix"></span><span class="brand-suffix text-gradient"></span>
+        </a>
+        <p class="footer-tagline"></p>
+        <div class="footer-social" id="footer-social"></div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links" id="footer-company-links"></ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Services</h4>
+        <ul class="footer-links" id="footer-services-links"></ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact</h4>
+        <a class="footer-contact-row footer-email-link" href="#"></a>
+        <div class="footer-contact-row">
+          <i data-lucide="map-pin" style="width:0.875rem;height:0.875rem;flex-shrink:0;margin-right:0.5rem"></i>
+          Sydney, Australia
         </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-background-darker">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gradient mb-3 fade-in-up contact-title"></h2>
-                <p class="text-lg text-gray-400 max-w-xl mx-auto fade-in-up delay-100 contact-subtitle"></p>
-            </div>
-
-            <div class="max-w-2xl mx-auto theme-card p-8 sm:p-10 shadow-2xl fade-in-up delay-200">
-                <form id="contactForm">
-                    <div class="mb-6">
-                        <label for="name" class="block text-gray-300 font-medium mb-2 contact-form-label" data-label="name"></label>
-                        <input type="text" id="name" name="name" required
-                               class="theme-input w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition duration-300"
-                               placeholder="">
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-300 font-medium mb-2 contact-form-label" data-label="email"></label>
-                        <input type="email" id="email" name="email" required
-                               class="theme-input w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition duration-300"
-                               placeholder="">
-                    </div>
-                    <div class="mb-8">
-                        <label for="message" class="block text-gray-300 font-medium mb-2 contact-form-label" data-label="message"></label>
-                        <textarea id="message" name="message" rows="5" required
-                                  class="theme-input w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition duration-300 resize-none"
-                                  placeholder=""></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit"
-                                class="gradient-button text-white font-bold py-3 px-12 rounded-lg text-lg shadow-xl contact-form-submit"></button>
-                    </div>
-                    <div class="mt-4 flex justify-center">
-                        <div class="recaptcha-badge mt-4">
-                            <span>Protected by </span>
-                            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" 
-                                 alt="reCAPTCHA" 
-                                 class="inline-block">
-                            <span>reCAPTCHA</span>
-                        </div>
-                    </div>
-                </form>
-                <div id="formMessage" class="text-center"></div>
-                <div id="thankYouMessage" class="hidden text-center">
-                    <div class="mb-6">
-                        <svg class="w-16 h-16 text-green-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Thank You!</h3>
-                    <p class="text-gray-300 mb-6">We've received your message and will get back to you as soon as possible.</p>
-                    <button onclick="resetForm()" class="gradient-button py-2 px-4 rounded-lg text-primary-light hover:text-primary transition-colors duration-300">
-                        Send another message
-                    </button>
-                </div>
-            </div>
+        <div style="margin-top:1.5rem">
+          <a href="#contact" class="btn-primary" style="font-size:0.85rem;padding:0.625rem 1.25rem">Book a Consultation</a>
         </div>
-    </section>
+      </div>
 
-    <footer class="theme-footer py-12">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <div class="mb-4">
-                <a href="#" class="text-2xl font-bold text-white">
-                    <span class="brand-prefix"></span><span class="text-gradient brand-suffix"></span>
-                </a>
-            </div>
-            <a href="mailto:contact@teacupdigital.com.au" class="mb-4 underline footer-email"></a>
-            
-            <p class="footer-copyright"></p>
-            <p class="text-sm footer-credits"></p>
-        </div>
-    </footer>
+    </div>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+    <div class="footer-bottom">
+      <p class="footer-copyright"></p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-        // Navbar background change on scroll
-        const navbar = document.getElementById('navbar');
-        window.onscroll = function () {
-            if (window.pageYOffset > 50) {
-                navbar.classList.add("shadow-lg");
-                navbar.classList.remove("py-3");
-                navbar.classList.add("py-2");
-            } else {
-                navbar.classList.remove("shadow-lg");
-                navbar.classList.add("py-3");
-                navbar.classList.remove("py-2");
-            }
-        };
 
-        // Set current year in footer
-        const currentYearElement = document.getElementById('currentYear');
-        if (currentYearElement) {
-            currentYearElement.textContent = new Date().getFullYear();
-        }
+<script>
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+</script>
 
-        // Contact Form Submission
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
-        const thankYouMessage = document.getElementById('thankYouMessage');
-
-        if (contactForm) {
-          contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            if (name && email && message) {
-              formMessage.innerHTML = '<p class="text-blue-400">Sending...</p>';
-              fetch('mail.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
-              })
-              .then(response => response.text().then(text => ({ status: response.status, text })))
-              .then(({ status, text }) => {
-                if (status === 200) {
-                  formMessage.innerHTML = '';
-                  contactForm.reset();
-                  contactForm.classList.add('hidden');
-                  thankYouMessage.classList.remove('hidden');
-                } else {
-                  formMessage.innerHTML = `<p class="text-red-400">${text}</p>`;
-                  setTimeout(() => { formMessage.innerHTML = ''; }, 5000);
-                }
-              })
-              .catch(() => {
-                formMessage.innerHTML = '<p class="text-red-400">Failed to send. Please try again later.</p>';
-                setTimeout(() => { formMessage.innerHTML = ''; }, 5000);
-              });
-            } else {
-              formMessage.innerHTML = '<p class="text-red-400">Please fill in all fields</p>';
-              setTimeout(() => { formMessage.innerHTML = ''; }, 3000);
-            }
-          });
-        }
-
-        // Show form again when 'Send another message' is clicked
-        window.resetForm = function() {
-          thankYouMessage.classList.add('hidden');
-          contactForm.classList.remove('hidden');
-        }
-
-        // Intersection Observer for animations
-        const animatedElements = document.querySelectorAll('.fade-in-up');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        animatedElements.forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-
-        // Hamburger menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('hidden');
-        });
-        // Close menu on nav link click (mobile)
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    navLinks.classList.add('hidden');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
