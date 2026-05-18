@@ -39,12 +39,6 @@ const SITE = {
     }
   ],
 
-  industries: [
-    'Professional Services', 'Finance & Fintech', 'Health & Care',
-    'Education', 'Retail & E-Commerce', 'Government & Public Sector',
-    'Logistics', 'SaaS Platforms', 'Enterprise'
-  ],
-
   services: {
     tag:      'Services',
     title:    'What We Do',
@@ -118,19 +112,35 @@ const SITE = {
   technologies: {
     title:    'Technologies We Work With',
     subtitle: 'Selected for the problem — not the popularity.',
-    items: [
-      { name: 'React',      icon: 'layout-dashboard' },
-      { name: 'Node.js',    icon: 'server'           },
-      { name: 'Python',     icon: 'code-2'           },
-      { name: 'AWS',        icon: 'cloud'            },
-      { name: 'TypeScript', icon: 'file-code'        },
-      { name: 'PostgreSQL', icon: 'database'         },
-      { name: 'Docker',     icon: 'box'              },
-      { name: 'Kubernetes', icon: 'cpu'              },
-      { name: 'TensorFlow', icon: 'activity'         },
-      { name: 'Redis',      icon: 'zap'              },
-      { name: 'GraphQL',    icon: 'git-branch'       },
-      { name: 'Terraform',  icon: 'settings'         }
+    categories: [
+      {
+        name:  'Frontend',
+        icon:  'layout-dashboard',
+        color: '#818CF8',
+        bg:    'rgba(99,102,241,0.12)',
+        items: ['React', 'Next.js', 'TypeScript']
+      },
+      {
+        name:  'Backend',
+        icon:  'server',
+        color: '#60A5FA',
+        bg:    'rgba(59,130,246,0.12)',
+        items: ['Node.js', 'Python', 'GraphQL', 'Redis']
+      },
+      {
+        name:  'Cloud & DevOps',
+        icon:  'cloud',
+        color: '#2DD4BF',
+        bg:    'rgba(20,184,166,0.12)',
+        items: ['AWS', 'Docker', 'Kubernetes', 'Terraform']
+      },
+      {
+        name:  'Data & AI',
+        icon:  'database',
+        color: '#A78BFA',
+        bg:    'rgba(139,92,246,0.12)',
+        items: ['PostgreSQL', 'OpenAI', 'LangChain', 'Python']
+      }
     ]
   },
 
@@ -194,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setNav();
   setHero();
   setTrust();
-  setIndustries();
   setServices();
   setProcess();
   setAbout();
@@ -253,17 +262,6 @@ function setTrust() {
         <div class="trust-desc">${t.desc}</div>
       </div>`;
     wrap.appendChild(item);
-  });
-}
-
-/* ── Industries ───────────────────────────────────────────── */
-function setIndustries() {
-  const track = document.getElementById('marquee-track');
-  [...SITE.industries, ...SITE.industries].forEach(name => {
-    const span = document.createElement('span');
-    span.className = 'marquee-item';
-    span.textContent = name;
-    track.appendChild(span);
   });
 }
 
@@ -386,12 +384,21 @@ function setAbout() {
 function setTechnologies() {
   document.querySelector('.tech-title').textContent = SITE.technologies.title;
   document.querySelector('.tech-sub').textContent   = SITE.technologies.subtitle;
-  const wrap = document.getElementById('tech-pills');
-  SITE.technologies.items.forEach(t => {
-    const pill = document.createElement('div');
-    pill.className = 'tech-pill';
-    pill.innerHTML = `<i data-lucide="${t.icon}" style="width:0.95rem;height:0.95rem;color:#818CF8"></i>${t.name}`;
-    wrap.appendChild(pill);
+  const wrap = document.getElementById('tech-categories');
+  SITE.technologies.categories.forEach((cat, i) => {
+    const card = document.createElement('div');
+    card.className = `tech-cat-card reveal reveal-d${i + 1}`;
+    card.innerHTML = `
+      <div class="tech-cat-header">
+        <div class="tech-cat-icon" style="background:${cat.bg}">
+          <i data-lucide="${cat.icon}" style="width:1rem;height:1rem;color:${cat.color}"></i>
+        </div>
+        <span class="tech-cat-name" style="color:${cat.color}">${cat.name}</span>
+      </div>
+      <div class="tech-cat-items">
+        ${cat.items.map(name => `<span class="tech-tag">${name}</span>`).join('')}
+      </div>`;
+    wrap.appendChild(card);
   });
 }
 
